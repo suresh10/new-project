@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Hello</title>    
+<title>Hello</title>
+<style>
+.button{background:#fff; border:1px solid #000; padding:7px 12px; color:#000; border-radius:6px;}
+.inputcs{padding:7px 10px; border:1px solid #000; border-radius:6px;}
+</style>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <script src="form/jquery.js"></script>
@@ -22,7 +27,7 @@ $(document).ready(function() {
 			url: "http://webastitva.com/clients/SOAP/productlistclient.php",
 			data: $('form').serialize(),
 			beforeSend: function(){
-			$('#result').html('<div style="padding-top:100px; margin-bottom:100px;">Loading...</div>');
+			$('#result').html('<div style="height:100px; padding-top:35px;"><img src="assets/loading.gif" class="center-block" style="width:35px; padding-bottom:10px;" /></div>');
 			},
             success: function(response) {
  			$('#result').html(response);
@@ -35,14 +40,14 @@ $(document).ready(function() {
 </head>
 
 <body>
-Hello Everyone
-
+<p>Welcome,</p>
+<p>It is a basic tutorial for getting soap response inside the div. Please submit your credentials to get response.</p>
 <form name="test" id="test" method="post">
 <div>
-<input type="text" placeholder="Please enter text" />
+<input class="inputcs" type="password" name="password" placeholder="Please enter password" />
 </div>
 <div>
-<input type="submit" value="Soap" />
+<input class="button" type="submit" value="Soap" />
 </div>
 </form>
 
