@@ -11,6 +11,14 @@ body{font-family:calibri;}
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
 <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
+
+<!-- Inserted below lines for geolocation -->
+<script type="text/javascript" src="cordova-1.7.0.js"></script>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBakXlHDpr_SsWL_6dqhbXl7jYQ866YtJ0&sensor=false"></script>
+<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="js/exercisetracker.js"></script>
+<!-- Geolocation ends -->
+
 <script src="phonegap.js"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 
@@ -146,6 +154,11 @@ $(document).ready(function() {
       </ul>
     </div>
   <div data-role="main" class="ui-content">
+   <p><a href="#startTracking" data-transition="none" data-icon="plus">Track Workout</a></p>
+   <button id="home_network_button" data-icon="check">Internet Access Enabled</button>
+   <button id="home_clearstorage_button">Clear local storage</button>
+   <button id="home_seedgps_button">Load Seed GPS Data</button>
+   
     <p>It is a basic tutorial for getting soap response inside the div. Please submit your credentials to get response.</p>
     <form name="test" id="test" method="post">
     <div>
@@ -221,6 +234,35 @@ $(document).ready(function() {
 
   <div data-role="footer">
     <h1>Created by WebAstitva</h1>
+  </div>
+</div>
+
+
+<div data-role="page" id="startTracking">
+  <div data-role="header">
+    <h1>Track Workout</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#pageone" data-transition="flip" data-icon="home">Home</a></li>
+        <li><a href="#pagecontact" data-transition="flip" data-icon="phone">Contact Us</a></li>
+        <li><a href="#pagetwo" data-transition="slide" data-icon="info">About Us</a></li>
+        <li><a href="#pagecam" data-transition="slide" data-icon="info">Camera</a></li>
+      </ul>
+    </div>
+  </div>
+ 
+  <div data-role="content"> 
+    <p id="startTracking_status"></p>
+      <div data-role="fieldcontain" class="ui-hide-label">
+        <label for="track_id">Track ID/Name:</label>
+        <input type="text" name="track_id" id="track_id" placeholder="Workout ID/Name"/>
+      </div>
+ 
+    <button data-role="button" id="startTracking_start">Start Tracking</button>
+    <button data-role="button" id="startTracking_stop">Stop Tracking</button>  
+     
+        <p id="startTracking_debug"></p>
+         
   </div>
 </div>
 
