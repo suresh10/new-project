@@ -45,28 +45,71 @@ $(document).ready(function() {
 </head>
 
 <body>
-<p>Welcome,</p>
-<p>It is a basic tutorial for getting soap response inside the div. Please submit your credentials to get response.</p>
-<form name="test" id="test" method="post">
-<div>
-<input class="inputcs" type="password" name="password" placeholder="Please enter password" />
-</div>
-<div>
-<input class="button" type="submit" value="Submit" />
-</div>
-</form>
 
-<div id="result"></div>
-
-
-<div id="reposHome" data-role="page">
-    <div data-role="header" data-position="fixed">
-        <h1>GitHub Search</h1>
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>SOAP MiniAPP</h1>
+  </div>
+  <div data-role="navbar">
+      <ul>
+        <li><a href="#pageone" data-transition="flip" class="ui-btn ui-icon-phone ui-btn-icon-left">Home</a></li>
+        <li><a href="#pagecontact" data-transition="flip" class="ui-btn ui-icon-phone ui-btn-icon-left">Contact Us</a></li>
+        <li><a href="#pagetwo" data-transition="slide" class="ui-btn ui-icon-info ui-btn-icon-left">About Us</a></li>
+      </ul>
     </div>
-    <div data-role="content">
-        <ul id="allRepos" data-role="listview"  data-filter="true">
-        </ul>
+  <div data-role="main" class="ui-content">
+    <p>It is a basic tutorial for getting soap response inside the div. Please submit your credentials to get response.</p>
+    <form name="test" id="test" method="post">
+    <div>
+    <input class="inputcs" type="password" name="password" placeholder="Please enter password" />
     </div>
+    <div>
+    <input class="button" type="submit" value="Submit" />
+    </div>
+    </form>
+    
+    <div id="result"></div>
+  </div>
+
+  <div data-role="footer">
+    <h1>Created by WebAstitva</h1>
+  </div>
+</div>
+
+<div data-role="page" data-dialog="true" id="pagecontact">
+  <div data-role="header">
+    <h1>Contact us</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Office: 1234567890</p>
+    <p>Sales:  9876543210</p>
+
+    <p>enquiry@webastitva.com</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left">Go to Home</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Created by WebAstitva</h1>
+  </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>About WebAstitva.com</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Hello Everyone</p>
+    <p>WebAstitva, a small-size digital agency which is creating distinct online identities.</p>
+	<p>WebAstitva is a growing independent digital agency that was founded in 2012. We have satisfied clients including Corporates, Financial Institution, Education Institutes, mid-sized and retail clients.</p>
+	<p>Our innovative media strategies are maximize the impact and minimize the costs.</p>
+    <a href="#pageone" data-transition="slide" data-direction="reverse" class="ui-btn ui-icon-home ui-btn-icon-left">Go to Home</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Created by WebAstitva</h1>
+  </div>
 </div>
 
 </body>
